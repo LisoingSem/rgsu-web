@@ -1,1467 +1,1441 @@
 .slider-container {
-    margin-top: 10px;
+        margin-top: 10px;
 
-    .swiper {
-        width: 100%;
-        height: 100%;
-
-        .swiper-wrapper {
-            .swiper-slide {
+        .swiper {
                 width: 100%;
-                text-align: center;
-                font-size: 18px;
-                background: #fff;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                height: 100%;
 
-                img {
-                    display: block;
-                    width: 100%;
-                    height: auto;
-                    object-fit: cover;
+                .swiper-wrapper {
+                        .swiper-slide {
+                                width: 100%;
+                                text-align: center;
+                                font-size: 18px;
+                                background: #fff;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
 
-
-                }
-            }
-        }
-
-        &-button-prev,
-        &-button-next {
-            display: block;
-            color: #fff;
-            transition: all .5s ease-in-out;
-
-            &::after {
-                font-size: 25px;
-                transition: all .5s ease-in-out;
-            }
-
-            &:hover {
-                &::after {
-                    background-color: $color-yellow;
+                                img {
+                                        display: block;
+                                        width: 100%;
+                                        height: auto;
+                                        object-fit: cover;
+                                }
+                        }
                 }
 
-            }
+                &-button-prev,
+                &-button-next {
+                        display: block;
+                        color: #fff;
+                        transition: all 0.5s ease-in-out;
 
+                        &::after {
+                                font-size: 25px;
+                                transition: all 0.5s ease-in-out;
+                        }
+
+                        &:hover {
+                                &::after {
+                                        background-color: $color-yellow;
+                                }
+                        }
+                }
+
+                &-button-prev {
+                        left: -100px;
+
+                        &::after {
+                                background-color: rgba(102, 102, 102, 0.566);
+                                padding: 15px 25px 15px 25px;
+                        }
+                }
+
+                &-button-next {
+                        right: -50px;
+
+                        &::after {
+                                background-color: rgba(57, 56, 56, 0.566);
+                                padding: 15px 50px 15px 25px;
+                        }
+                }
+
+                &:hover {
+                        .swiper-button-prev {
+                                left: 0px;
+                        }
+
+                        .swiper-button-next {
+                                right: 40px;
+                        }
+                }
         }
-
-        &-button-prev {
-            left: -100px;
-
-            &::after {
-                background-color: rgba(102, 102, 102, 0.566);
-                padding: 15px 25px 15px 25px;
-            }
-        }
-
-        &-button-next {
-            right: -50px;
-
-            &::after {
-                background-color: rgba(57, 56, 56, 0.566);
-                padding: 15px 50px 15px 25px;
-            }
-        }
-
-        &:hover {
-            .swiper-button-prev {
-                left: 0px;
-            }
-
-            .swiper-button-next {
-                right: 40px;
-            }
-        }
-    }
 }
 
 main {
-    font-family: $font-main;
-    padding: 40px 10px;
+        font-family: $font-main;
+        padding: 40px 10px;
 
-    .mission-wrapper {
-        div {
-            display: block;
-            position: relative;
-            overflow: hidden;
-            height: 100%;
-
-            img {
-                height: auto;
-                width: 100%;
-                object-fit: cover;
-            }
-
-            &::before {
-                border-bottom: 1px solid $color-white;
-                border-top: 1px solid $color-white;
-                bottom: 20px;
-                content: "";
-                left: 20px;
-                position: absolute;
-                right: 20px;
-                top: 20px;
-                transform: scale(0, 1);
-                -webkit-transform: scale(0, 1);
-                -moz-transform: scale(0, 1);
-                z-index: 9;
-            }
-
-            &::after {
-                border-left: 1px solid $color-white;
-                border-right: 1px solid $color-white;
-                bottom: 20px;
-                content: "";
-                left: 20px;
-                position: absolute;
-                right: 20px;
-                top: 20px;
-                transform: scale(1, 0);
-                -webkit-transform: scale(1, 0);
-                z-index: 9;
-            }
-
-            &:hover::before,
-            &:hover::after {
-                -webkit-transform: scale(1);
-                transform: scale(1);
-                -webkit-transition: all 0.3s ease-out 0s;
-                transition: all .5s ease-out 0s;
-            }
-        }
-
-
-    }
-
-    .policies-wrapper {
-        padding-top: 30px;
-
-        .category-wrapper {
-            h2 {
-                border: 1px solid $color-gray;
-                padding: 10px 0;
-                text-align: center;
-                color: $color-white;
-                font-size: 20px;
-                font-weight: bolder;
-                background-color: $color-primary;
-
-                i {
-                    display: none;
-                }
-            }
-
-            ul {
-                border-right: 1px solid $color-gray;
-                border-left: 1px solid $color-gray;
-
-                li {
-                    border-bottom: 1px solid $color-gray;
-                    position: relative;
-
-                    &.active {
-                        &::before {
-                            content: '';
-                            position: absolute;
-                            width: 3px;
-                            height: 100%;
-                            background-color: $color-yellow;
-                        }
-
-                        a {
-                            color: $color-yellow;
-                        }
-                    }
-
-                    &:hover {
-                        &::before {
-                            content: '';
-                            position: absolute;
-                            width: 3px;
-                            height: 100%;
-                            background-color: $color-yellow;
-                        }
-
-                        a {
-                            color: $color-yellow;
-                            transition: all .2s ease-in-out;
-                        }
-                    }
-
-                    a {
-                        padding: 15px 20px;
-                        display: flex;
-                        align-items: center;
-                        gap: 8px;
-                        font-weight: 600;
-
-                        span {
-                            font-size: 17px;
-                        }
-
-                        i {
-                            font-size: 12px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .content-wrapper {
-            border: 1px solid $color-gray;
-            overflow: hidden;
-            height: auto;
-
-            img {
-                width: 100%;
-                height: auto;
-                object-fit: cover;
-                transition: all .3s ease-in-out;
-
-                &:hover {
-                    transform: scale(105%, 110%);
-                }
-            }
-        }
-    }
-
-    .menu-wrapper {
-        padding-top: 30px;
-
-        .wrapper {
-            gap: 20px;
-
-            div {
-
-                &:first-child {
-                    background-color: $color-primary;
-                }
-
-                &:last-child {
-                    background-color: $color-secondary;
-                }
-
-                a {
-                    display: block;
-                    position: relative;
-                    overflow: hidden;
-                    height: 100%;
-
-                    h1 {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        padding: 45px 20px;
-                        font-size: 29px;
-                        font-weight: bolder;
-                        color: $color-white;
-                        text-transform: uppercase;
-                    }
-
-                    &::before {
-                        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-                        border-top: 1px solid rgba(255, 255, 255, 0.8);
-                        bottom: 20px;
-                        content: "";
-                        left: 20px;
-                        position: absolute;
-                        right: 20px;
-                        top: 20px;
-                        transform: scale(0, 1);
-                        -webkit-transform: scale(0, 1);
-                        -moz-transform: scale(0, 1);
-                        z-index: 9;
-                    }
-
-                    &::after {
-                        border-left: 1px solid rgba(255, 255, 255, 0.8);
-                        border-right: 1px solid rgba(255, 255, 255, 0.8);
-                        bottom: 20px;
-                        content: "";
-                        left: 20px;
-                        position: absolute;
-                        right: 20px;
-                        top: 20px;
-                        transform: scale(1, 0);
-                        -webkit-transform: scale(1, 0);
-                        z-index: 9;
-                    }
-
-                    &:hover::before,
-                    &:hover::after {
-                        -webkit-transform: scale(1);
-                        transform: scale(1);
-                        -webkit-transition: all 0.3s ease-out 0s;
-                        transition: all .5s ease-out 0s;
-                    }
-                }
-
-            }
-        }
-    }
-
-    .news-wrapper {
-        padding-top: 30px;
-
-        .wrapper {
-            gap: 20px;
-
-            .read-more {
-                display: inline-block;
-                padding: 10px 15px;
-                border: 1px solid $color-gray;
-                transition: all .3s ease-in-out;
-
-                &:hover {
-                    color: $color-yellow;
-                    border-color: $color-yellow;
-                }
-            }
-
-            .pagination {
-                display: flex;
-                justify-content: center;
-
-                ul {
-                    border: 1px solid $color-gray;
-                    display: inline-flex;
-
-                    li {
-                        border-right: 1px solid $color-gray;
-
-                        a {
-                            display: inline-flex;
-                            align-items: center;
-                            padding: 5px 15px;
-                            font-size: 18px;
-                            transition: all .3s ease-in-out;
-                            gap: 5px;
-
-                            i {
-                                margin-top: 2px;
-                                font-size: 11px;
-                            }
-
-                            &:hover {
-                                background-color: $color-yellow;
-                                color: $color-white;
-                            }
-                        }
-
-                        &.active {
-                            background-color: $color-yellow;
-                            color: $color-white;
-                        }
-
-                        &:last-child {
-                            border: unset;
-                        }
-                    }
-                }
-            }
-
-            .header-wrapper {
-                margin-bottom: 20px;
-                background-color: $color-primary;
-
-                &:last-child {
-                    background-color: $color-secondary;
-                }
-
-                a {
-                    display: block;
-                    position: relative;
-                    overflow: hidden;
-                    height: 100%;
-
-                    h1 {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        padding: 45px 20px;
-                        font-size: 29px;
-                        font-weight: bolder;
-                        color: $color-white;
-                        text-transform: uppercase;
-                    }
-
-                    &::before {
-                        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-                        border-top: 1px solid rgba(255, 255, 255, 0.8);
-                        bottom: 20px;
-                        content: "";
-                        left: 20px;
-                        position: absolute;
-                        right: 20px;
-                        top: 20px;
-                        transform: scale(0, 1);
-                        -webkit-transform: scale(0, 1);
-                        -moz-transform: scale(0, 1);
-                        z-index: 9;
-                    }
-
-                    &::after {
-                        border-left: 1px solid rgba(255, 255, 255, 0.8);
-                        border-right: 1px solid rgba(255, 255, 255, 0.8);
-                        bottom: 20px;
-                        content: "";
-                        left: 20px;
-                        position: absolute;
-                        right: 20px;
-                        top: 20px;
-                        transform: scale(1, 0);
-                        -webkit-transform: scale(1, 0);
-                        z-index: 9;
-                    }
-
-                    &:hover::before,
-                    &:hover::after {
-                        -webkit-transform: scale(1);
-                        transform: scale(1);
-                        -webkit-transition: all 0.3s ease-out 0s;
-                        transition: all .5s ease-out 0s;
-                    }
-                }
-
-            }
-
-            .press-breifing {
-
-                .header-wrapper {
-                    background-color: $color-primary;
-                }
-
-                .news {
-                    gap: 10px;
-                    border-bottom: 1px solid $color-secondary;
-                    margin-bottom: 20px;
-                    padding-bottom: 20px;
-
-                    .thumbnail {
+        .mission-wrapper {
+                div {
+                        display: block;
                         position: relative;
-                        height: 170px;
-                        width: 100%;
                         overflow: hidden;
+                        height: 100%;
 
                         img {
-                            height: 100%;
-                            width: 100%;
-                            object-fit: cover;
-                            transition: transform .3s ease-in-out;
-
-                            &:hover {
-                                transform: scale(110%);
-                            }
+                                height: auto;
+                                width: 100%;
+                                object-fit: cover;
                         }
 
-                        .date {
-                            position: absolute;
-                            bottom: 0;
-                            right: 0;
-                            padding: 5px 10px;
-                            background-color: $color-yellow;
-                            opacity: .9;
-                            line-height: 23px;
+                        &::before {
+                                border-bottom: 1px solid $color-white;
+                                border-top: 1px solid $color-white;
+                                bottom: 20px;
+                                content: "";
+                                left: 20px;
+                                position: absolute;
+                                right: 20px;
+                                top: 20px;
+                                transform: scale(0, 1);
+                                -webkit-transform: scale(0, 1);
+                                -moz-transform: scale(0, 1);
+                                z-index: 9;
+                        }
 
-                            &-wrapper {
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
+                        &::after {
+                                border-left: 1px solid $color-white;
+                                border-right: 1px solid $color-white;
+                                bottom: 20px;
+                                content: "";
+                                left: 20px;
+                                position: absolute;
+                                right: 20px;
+                                top: 20px;
+                                transform: scale(1, 0);
+                                -webkit-transform: scale(1, 0);
+                                z-index: 9;
+                        }
+
+                        &:hover::before,
+                        &:hover::after {
+                                -webkit-transform: scale(1);
+                                transform: scale(1);
+                                -webkit-transition: all 0.3s ease-out 0s;
+                                transition: all 0.5s ease-out 0s;
+                        }
+                }
+        }
+
+        .policies-wrapper {
+                padding-top: 30px;
+
+                .category-wrapper {
+                        h2 {
+                                border: 1px solid $color-gray;
+                                padding: 13px 0;
+                                text-align: center;
                                 color: $color-white;
+                                font-size: 20px;
+                                font-weight: bolder;
+                                background-color: $color-primary;
 
-                                strong {
-                                    font-size: 22px;
-                                    font-weight: 900;
-                                    padding: 5px 0;
+                                i {
+                                        display: none;
                                 }
-
-                                span {
-                                    font-size: 15px;
-                                }
-                            }
                         }
 
-                    }
+                        ul {
+                                border-right: 1px solid $color-gray;
+                                border-left: 1px solid $color-gray;
 
-                    h2 {
-                        font-size: 18px;
-                        font-weight: 600;
-                        margin-bottom: 10px;
-                        transition: all .3s ease-in-out;
+                                li {
+                                        border-bottom: 1px solid $color-gray;
+                                        position: relative;
+
+                                        &.active {
+                                                &::before {
+                                                        content: "";
+                                                        position: absolute;
+                                                        width: 3px;
+                                                        height: 100%;
+                                                        background-color: $color-yellow;
+                                                }
+
+                                                a {
+                                                        color: $color-yellow;
+                                                }
+                                        }
+
+                                        &:hover {
+                                                &::before {
+                                                        content: "";
+                                                        position: absolute;
+                                                        width: 3px;
+                                                        height: 100%;
+                                                        background-color: $color-yellow;
+                                                }
+
+                                                a {
+                                                        color: $color-yellow;
+                                                        transition: all 0.2s ease-in-out;
+                                                }
+                                        }
+
+                                        a {
+                                                padding: 9px 20px;
+                                                display: flex;
+                                                align-items: center;
+                                                gap: 8px;
+                                                font-weight: 600;
+
+                                                span {
+                                                        font-size: 17px;
+                                                }
+
+                                                i {
+                                                        font-size: 12px;
+                                                }
+                                        }
+                                }
+                        }
+                }
+
+                .content-wrapper {
+                        border: 1px solid $color-gray;
                         overflow: hidden;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 4;
-                        line-clamp: 4;
-                        -webkit-box-orient: vertical;
+                        height: fit-content;
+                        height: -moz-fit-content;
 
-                        &:hover {
-                            color: $color-yellow;
-                        }
-                    }
-                }
-            }
-
-            .press-release {
-
-                .header-wrapper {
-                    background-color: $color-secondary;
-                }
-
-                .news {
-                    border-bottom: 1px solid $color-secondary;
-                    margin-bottom: 20px;
-                    padding-bottom: 20px;
-
-                    .header {
-                        display: flex;
-                        gap: 10px;
-
-                        .date-wrapper {
-                            padding: 10px 10px;
-                            background-color: $color-yellow;
-                            opacity: .9;
-                            line-height: 23px;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-                            color: $color-white;
-
-                            span {
-                                display: flex;
-                                justify-content: center;
-                                white-space: nowrap;
-                                font-size: 11px;
-                            }
-
-                            strong {
-                                font-size: 40px;
-                                padding: 10px 0;
-                            }
-                        }
-
-                        .title {
-                            h2 {
-                                font-size: 19px;
-                                font-weight: 600;
-                                transition: all .3s ease-in-out;
-                                overflow: hidden;
-                                display: -webkit-box;
-                                -webkit-line-clamp: 2;
-                                line-clamp: 2;
-                                -webkit-box-orient: vertical;
+                        img {
+                                width: 100%;
+                                height: auto;
+                                object-fit: cover;
+                                transition: all 0.3s ease-in-out;
 
                                 &:hover {
-                                    color: $color-yellow;
+                                        transform: scale(105%, 110%);
                                 }
-                            }
+                        }
+                }
+        }
 
-                            .options {
-                                color: $color-gray;
-                                font-size: 15px;
-                                flex-wrap: nowrap;
+        .menu-wrapper {
+                padding-top: 30px;
 
+                .wrapper {
+                        gap: 20px;
+
+                        div {
+                                &:first-child {
+                                        background-color: $color-primary;
+                                }
+
+                                &:last-child {
+                                        background-color: $color-secondary;
+                                }
 
                                 a {
-                                    position: relative;
+                                        display: block;
+                                        position: relative;
+                                        overflow: hidden;
+                                        height: 100%;
 
-                                    span {
-                                        transition: all .2s ease-in-out;
-                                        padding: 5px 10px 5px 0;
+                                        h1 {
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                padding: 45px 20px;
+                                                font-size: 29px;
+                                                font-weight: bolder;
+                                                color: $color-white;
+                                                text-transform: uppercase;
+                                        }
 
-                                    }
-
-                                    &:last-child {
-                                        padding-left: 5px;
+                                        &::before {
+                                                border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+                                                border-top: 1px solid rgba(255, 255, 255, 0.8);
+                                                bottom: 20px;
+                                                content: "";
+                                                left: 20px;
+                                                position: absolute;
+                                                right: 20px;
+                                                top: 20px;
+                                                transform: scale(0, 1);
+                                                -webkit-transform: scale(0, 1);
+                                                -moz-transform: scale(0, 1);
+                                                z-index: 9;
+                                        }
 
                                         &::after {
-                                            content: unset;
+                                                border-left: 1px solid rgba(255, 255, 255, 0.8);
+                                                border-right: 1px solid rgba(255, 255, 255, 0.8);
+                                                bottom: 20px;
+                                                content: "";
+                                                left: 20px;
+                                                position: absolute;
+                                                right: 20px;
+                                                top: 20px;
+                                                transform: scale(1, 0);
+                                                -webkit-transform: scale(1, 0);
+                                                z-index: 9;
                                         }
-                                    }
 
-                                    &::after {
-                                        content: '';
-                                        right: 0;
-                                        bottom: 18%;
-                                        position: absolute;
-                                        width: 1px;
-                                        height: 65%;
-                                        background-color: $color-gray;
-                                    }
-
-                                    &:hover {
-                                        span {
-                                            color: $color-black;
-                                            text-decoration: underline;
+                                        &:hover::before,
+                                        &:hover::after {
+                                                -webkit-transform: scale(1);
+                                                transform: scale(1);
+                                                -webkit-transition: all 0.3s ease-out 0s;
+                                                transition: all 0.5s ease-out 0s;
                                         }
-                                    }
                                 }
-                            }
                         }
-                    }
-
-                    .description {
-                        margin: 10px 0;
-                        font-size: 18px;
-                        transition: all .3s ease-in-out;
-                        overflow: hidden;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 3;
-                        line-clamp: 3;
-                        -webkit-box-orient: vertical;
-                    }
                 }
-            }
         }
-    }
+
+        .news-wrapper {
+                padding-top: 30px;
+
+                .wrapper {
+                        gap: 20px;
+
+                        .read-more {
+                                display: inline-block;
+                                padding: 10px 15px;
+                                border: 1px solid $color-gray;
+                                transition: all 0.3s ease-in-out;
+
+                                &:hover {
+                                        color: $color-yellow;
+                                        border-color: $color-yellow;
+                                }
+                        }
+
+                        .pagination {
+                                display: flex;
+                                justify-content: center;
+
+                                ul {
+                                        border: 1px solid $color-gray;
+                                        display: inline-flex;
+
+                                        li {
+                                                border-right: 1px solid $color-gray;
+
+                                                a {
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        padding: 5px 15px;
+                                                        font-size: 18px;
+                                                        transition: all 0.3s ease-in-out;
+                                                        gap: 5px;
+
+                                                        i {
+                                                                margin-top: 2px;
+                                                                font-size: 11px;
+                                                        }
+
+                                                        &:hover {
+                                                                background-color: $color-yellow;
+                                                                color: $color-white;
+                                                        }
+                                                }
+
+                                                &.active {
+                                                        background-color: $color-yellow;
+                                                        color: $color-white;
+                                                }
+
+                                                &:last-child {
+                                                        border: unset;
+                                                }
+                                        }
+                                }
+                        }
+
+                        .header-wrapper {
+                                margin-bottom: 20px;
+                                background-color: $color-primary;
+
+                                &:last-child {
+                                        background-color: $color-secondary;
+                                }
+
+                                a {
+                                        display: block;
+                                        position: relative;
+                                        overflow: hidden;
+                                        height: 100%;
+
+                                        h1 {
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                padding: 45px 20px;
+                                                font-size: 29px;
+                                                font-weight: bolder;
+                                                color: $color-white;
+                                                text-transform: uppercase;
+                                                white-space: nowrap;
+                                        }
+
+                                        &::before {
+                                                border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+                                                border-top: 1px solid rgba(255, 255, 255, 0.8);
+                                                bottom: 20px;
+                                                content: "";
+                                                left: 20px;
+                                                position: absolute;
+                                                right: 20px;
+                                                top: 20px;
+                                                transform: scale(0, 1);
+                                                -webkit-transform: scale(0, 1);
+                                                -moz-transform: scale(0, 1);
+                                                z-index: 9;
+                                        }
+
+                                        &::after {
+                                                border-left: 1px solid rgba(255, 255, 255, 0.8);
+                                                border-right: 1px solid rgba(255, 255, 255, 0.8);
+                                                bottom: 20px;
+                                                content: "";
+                                                left: 20px;
+                                                position: absolute;
+                                                right: 20px;
+                                                top: 20px;
+                                                transform: scale(1, 0);
+                                                -webkit-transform: scale(1, 0);
+                                                z-index: 9;
+                                        }
+
+                                        &:hover::before,
+                                        &:hover::after {
+                                                -webkit-transform: scale(1);
+                                                transform: scale(1);
+                                                -webkit-transition: all 0.3s ease-out 0s;
+                                                transition: all 0.5s ease-out 0s;
+                                        }
+                                }
+                        }
+
+                        .press-breifing {
+                                .header-wrapper {
+                                        background-color: $color-primary;
+                                }
+
+                                .news {
+                                        gap: 10px;
+                                        border-bottom: 1px solid $color-secondary;
+                                        margin-bottom: 20px;
+                                        padding-bottom: 20px;
+
+                                        .thumbnail {
+                                                position: relative;
+                                                height: 170px;
+                                                width: 100%;
+                                                overflow: hidden;
+
+                                                img {
+                                                        height: 100%;
+                                                        width: 100%;
+                                                        object-fit: cover;
+                                                        transition: transform 0.3s ease-in-out;
+
+                                                        &:hover {
+                                                                transform: scale(110%);
+                                                        }
+                                                }
+
+                                                .date {
+                                                        position: absolute;
+                                                        bottom: 0;
+                                                        right: 0;
+                                                        padding: 5px 10px;
+                                                        background-color: $color-yellow;
+                                                        opacity: 0.9;
+                                                        line-height: 23px;
+
+                                                        &-wrapper {
+                                                                display: flex;
+                                                                flex-direction: column;
+                                                                align-items: center;
+                                                                color: $color-white;
+
+                                                                strong {
+                                                                        font-size: 22px;
+                                                                        font-weight: 900;
+                                                                        padding: 5px 0;
+                                                                }
+
+                                                                span {
+                                                                        font-size: 15px;
+                                                                }
+                                                        }
+                                                }
+                                        }
+
+                                        h2 {
+                                                font-size: 18px;
+                                                font-weight: 600;
+                                                margin-bottom: 10px;
+                                                transition: all 0.3s ease-in-out;
+                                                overflow: hidden;
+                                                display: -webkit-box;
+                                                -webkit-line-clamp: 4;
+                                                line-clamp: 4;
+                                                -webkit-box-orient: vertical;
+                                                @-moz-document url-prefix() {
+                                                        word-break: break-all;
+                                                        word-wrap: break-word;
+                                                }
+
+                                                &:hover {
+                                                        color: $color-yellow;
+                                                }
+                                        }
+                                }
+                        }
+
+                        .press-release {
+                                .header-wrapper {
+                                        background-color: $color-secondary;
+                                }
+
+                                .news {
+                                        border-bottom: 1px solid $color-secondary;
+                                        margin-bottom: 20px;
+                                        padding-bottom: 20px;
+                                        overflow: hidden;
+
+                                        .header {
+                                                display: flex;
+                                                gap: 10px;
+
+                                                .date-wrapper {
+                                                        padding: 10px 10px;
+                                                        background-color: $color-yellow;
+                                                        opacity: 0.9;
+                                                        line-height: 23px;
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        color: $color-white;
+
+                                                        span {
+                                                                display: flex;
+                                                                justify-content: center;
+                                                                white-space: nowrap;
+                                                                font-size: 11px;
+                                                        }
+
+                                                        strong {
+                                                                font-size: 40px;
+                                                                padding: 10px 0;
+                                                        }
+                                                }
+
+                                                .title {
+                                                        h2 {
+                                                                font-size: 19px;
+                                                                font-weight: 600;
+                                                                transition: all 0.3s ease-in-out;
+                                                                overflow: hidden;
+                                                                display: -webkit-box;
+                                                                -webkit-line-clamp: 2;
+                                                                line-clamp: 2;
+                                                                -webkit-box-orient: vertical;
+                                                                @-moz-document url-prefix() {
+                                                                        word-break: break-all;
+                                                                        word-wrap: break-word;
+                                                                }
+
+                                                                &:hover {
+                                                                        color: $color-yellow;
+                                                                }
+                                                        }
+
+                                                        .options {
+                                                                color: $color-gray;
+                                                                font-size: 15px;
+                                                                flex-wrap: nowrap;
+
+                                                                a {
+                                                                        position: relative;
+
+                                                                        span {
+                                                                                transition: all 0.2s ease-in-out;
+                                                                                padding: 5px 10px 5px 0;
+                                                                        }
+
+                                                                        &:last-child {
+                                                                                padding-left: 5px;
+
+                                                                                &::after {
+                                                                                        content: unset;
+                                                                                }
+                                                                        }
+
+                                                                        &::after {
+                                                                                content: "";
+                                                                                right: 0;
+                                                                                bottom: 18%;
+                                                                                position: absolute;
+                                                                                width: 1px;
+                                                                                height: 65%;
+                                                                                background-color: $color-gray;
+                                                                        }
+
+                                                                        &:hover {
+                                                                                span {
+                                                                                        color: $color-black;
+                                                                                        text-decoration: underline;
+                                                                                }
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+                                        }
+
+                                        .description {
+                                                margin: 10px 0;
+                                                font-size: 18px;
+                                                transition: all 0.3s ease-in-out;
+                                                overflow: hidden;
+                                                display: -webkit-box;
+                                                -webkit-line-clamp: 3;
+                                                line-clamp: 3;
+                                                -webkit-box-orient: vertical;
+                                                @-moz-document url-prefix() {
+                                                        word-break: break-all;
+                                                        word-wrap: break-word;
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
 }
 
-
 @media (max-width: 1260px) {
-    main {
-        padding: 38px 10px;
+        main {
+                padding: 38px 10px;
 
-        .menu-wrapper,
-        .news-wrapper {
-            .wrapper {
-
-                div,
-                .header-wrapper {
-                    a {
-                        h1 {
-                            padding: 45px 20px;
-                            font-size: 27px;
+                .menu-wrapper,
+                .news-wrapper {
+                        .wrapper {
+                                div,
+                                .header-wrapper {
+                                        a {
+                                                h1 {
+                                                        padding: 45px 20px;
+                                                        font-size: 27px;
+                                                }
+                                        }
+                                }
                         }
-                    }
                 }
-            }
         }
-    }
 }
 
 @media (max-width: 1240px) {
-    main {
-        padding: 36px 10px;
+        main {
+                padding: 36px 10px;
 
-        .news-wrapper {
-            .wrapper {
-                gap: 15px;
+                .news-wrapper {
+                        .wrapper {
+                                gap: 15px;
 
-                .press-breifing {
-                    .news {
-                        .thumbnail {
-                            height: 160px;
+                                .press-breifing {
+                                        .news {
+                                                .thumbnail {
+                                                        height: 160px;
+                                                }
+
+                                                h2 {
+                                                        font-size: 17px;
+                                                        font-weight: 600;
+                                                        margin-bottom: 10px;
+                                                        transition: all 0.3s ease-in-out;
+                                                        overflow: hidden;
+                                                        display: -webkit-box;
+                                                        -webkit-line-clamp: 4;
+                                                        line-clamp: 4;
+                                                        -webkit-box-orient: vertical;
+
+                                                        &:hover {
+                                                                color: $color-yellow;
+                                                        }
+                                                }
+                                        }
+                                }
+
+                                .press-release {
+                                        .news {
+                                                .header {
+                                                        .date-wrapper {
+                                                                padding: 7px 10px;
+
+                                                                span {
+                                                                        font-size: 9px;
+                                                                }
+                                                        }
+
+                                                        .title {
+                                                                h2 {
+                                                                        font-size: 18px;
+                                                                }
+
+                                                                .options {
+                                                                        font-size: 14px;
+                                                                }
+                                                        }
+                                                }
+
+                                                .description {
+                                                        font-size: 17px;
+                                                }
+                                        }
+                                }
                         }
-
-                        h2 {
-                            font-size: 17px;
-                            font-weight: 600;
-                            margin-bottom: 10px;
-                            transition: all .3s ease-in-out;
-                            overflow: hidden;
-                            display: -webkit-box;
-                            -webkit-line-clamp: 4;
-                            line-clamp: 4;
-                            -webkit-box-orient: vertical;
-
-                            &:hover {
-                                color: $color-yellow;
-                            }
-                        }
-                    }
                 }
-
-                .press-release {
-                    .news {
-                        .header {
-                            .date-wrapper {
-                                padding: 7px 10px;
-
-                                span {
-                                    font-size: 9px;
-                                }
-                            }
-
-                            .title {
-                                h2 {
-                                    font-size: 18px;
-                                }
-
-                                .options {
-                                    font-size: 14px;
-                                }
-                            }
-                        }
-
-                        .description {
-                            font-size: 17px;
-                        }
-                    }
-                }
-
-            }
         }
-    }
 }
 
 @media (max-width: 1180px) {
-    main {
-        padding: 34px 10px;
+        main {
+                padding: 34px 10px;
 
-        .menu-wrapper,
-        .news-wrapper {
-            .wrapper {
-
-                div,
-                .header-wrapper {
-
-                    a {
-                        h1 {
-                            padding: 40px 20px;
-                            font-size: 24px;
+                .menu-wrapper,
+                .news-wrapper {
+                        .wrapper {
+                                div,
+                                .header-wrapper {
+                                        a {
+                                                h1 {
+                                                        padding: 40px 20px;
+                                                        font-size: 24px;
+                                                }
+                                        }
+                                }
                         }
-                    }
                 }
-            }
         }
-    }
 }
 
 @media (max-width: 1120px) {
-    main {
-        padding: 32px 10px;
+        main {
+                padding: 32px 10px;
 
-        .policies-wrapper {
-            .category-wrapper {
-                h2 {
-                    font-size: 18px;
-                }
+                .policies-wrapper {
+                        .category-wrapper {
+                                h2 {
+                                        font-size: 18px;
+                                }
 
-                ul {
-                    li {
-                        a {
-                            span {
-                                font-size: 16px;
-                            }
+                                ul {
+                                        li {
+                                                a {
+                                                        span {
+                                                                font-size: 16px;
+                                                        }
 
-                            i {
-                                font-size: 11px;
-                            }
+                                                        i {
+                                                                font-size: 11px;
+                                                        }
+                                                }
+                                        }
+                                }
                         }
-                    }
                 }
-            }
         }
-    }
 }
 
 @media (max-width: 1080px) {
-    main {
-        padding: 30px 10px;
+        main {
+                padding: 30px 10px;
 
-        .menu-wrapper,
-        .news-wrapper {
-            .wrapper {
-
-                div,
-                .header-wrapper {
-                    a {
-                        h1 {
-                            font-size: 22px;
+                .menu-wrapper,
+                .news-wrapper {
+                        .wrapper {
+                                div,
+                                .header-wrapper {
+                                        a {
+                                                h1 {
+                                                        font-size: 22px;
+                                                }
+                                        }
+                                }
                         }
-                    }
                 }
-            }
         }
-    }
 }
 
 @media (max-width: 1020px) {
-    main {
-        .policies-wrapper {
-            .category-wrapper {
-                h2 {
-                    font-size: 18px;
-                }
+        main {
+                .policies-wrapper {
+                        .category-wrapper {
+                                h2 {
+                                        font-size: 18px;
+                                }
 
-                ul {
+                                ul {
+                                        li {
+                                                a {
+                                                        padding: 10px 15px;
 
-                    li {
+                                                        span {
+                                                                font-size: 15px;
+                                                        }
 
-                        a {
-                            padding: 10px 15px;
-
-                            span {
-                                font-size: 15px;
-                            }
-
-                            i {
-                                font-size: 10px;
-                            }
+                                                        i {
+                                                                font-size: 10px;
+                                                        }
+                                                }
+                                        }
+                                }
                         }
-                    }
                 }
-            }
         }
-    }
-}
-
-@media (max-width: 950px) {
-    main {
-        .policies-wrapper {
-            .category-wrapper {
-                h2 {
-                    font-size: 16px;
-                }
-
-                ul {
-
-                    li {
-
-                        a {
-                            padding: 8px 15px;
-
-                            span {
-                                font-size: 14px;
-                            }
-
-                            i {
-                                font-size: 9px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 
 @media (max-width: 992px) {
-    main {
-        padding: 28px 10px;
+        main {
+                padding: 28px 10px;
 
-        .news-wrapper {
-            .wrapper {
-                gap: unset;
+                .news-wrapper {
+                        .wrapper {
+                                gap: unset;
 
-                .read-more {
-                    padding: 7px 13px;
-                }
-
-                .press-breifing {
-                    margin-bottom: 30px;
-
-                    .news {
-                        position: relative;
-                        gap: unset;
-
-                        .thumbnail {
-                            height: 250px;
-                            background-color: $color-primary;
-
-                            img {
-                                height: 100%;
-                                width: auto;
-                                margin: auto;
-                            }
-                        }
-
-                        h2 {
-                            font-size: 18px;
-                            margin: 10px 0;
-                            -webkit-line-clamp: 3;
-                            line-clamp: 3;
-                        }
-                    }
-                }
-
-                .press-release {
-                    .news {
-                        .header {
-                            .date-wrapper {
-                                padding: 5px 10px;
-
-                                span {
-                                    font-size: 9px;
-                                }
-                            }
-
-                            .title {
-                                h2 {
-                                    font-size: 18px;
+                                .read-more {
+                                        padding: 7px 13px;
                                 }
 
-                                .options {
-                                    font-size: 14px;
-                                }
-                            }
-                        }
+                                .press-breifing {
+                                        margin-bottom: 30px;
 
-                        .description {
-                            font-size: 16px;
+                                        .news {
+                                                position: relative;
+                                                gap: unset;
+
+                                                .thumbnail {
+                                                        height: 250px;
+                                                        background-color: $color-primary;
+
+                                                        img {
+                                                                height: 100%;
+                                                                width: auto;
+                                                                margin: auto;
+                                                        }
+                                                }
+
+                                                h2 {
+                                                        font-size: 18px;
+                                                        margin: 10px 0;
+                                                        -webkit-line-clamp: 3;
+                                                        line-clamp: 3;
+                                                }
+                                        }
+                                }
+
+                                .press-release {
+                                        .news {
+                                                .header {
+                                                        .date-wrapper {
+                                                                padding: 5px 10px;
+
+                                                                span {
+                                                                        font-size: 9px;
+                                                                }
+                                                        }
+
+                                                        .title {
+                                                                h2 {
+                                                                        font-size: 18px;
+                                                                }
+
+                                                                .options {
+                                                                        font-size: 14px;
+                                                                }
+                                                        }
+                                                }
+
+                                                .description {
+                                                        font-size: 16px;
+                                                }
+                                        }
+                                }
                         }
-                    }
                 }
-            }
         }
-    }
+}
+
+@media (max-width: 950px) {
+        main {
+                .policies-wrapper {
+                        .category-wrapper {
+                                h2 {
+                                        font-size: 16px;
+                                }
+
+                                ul {
+                                        li {
+                                                a {
+                                                        padding: 8px 15px;
+
+                                                        span {
+                                                                font-size: 14px;
+                                                        }
+
+                                                        i {
+                                                                font-size: 9px;
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
 }
 
 @media (max-width: 778px) {
-    main {
-        padding: 26px 10px;
+        main {
+                padding: 26px 10px;
 
-        .news-wrapper {
-            .wrapper {
-                .press-breifing {
-                    .news {
+                .news-wrapper {
+                        .wrapper {
+                                .press-breifing {
+                                        .news {
+                                                .thumbnail {
+                                                        height: 200px;
+                                                }
 
-                        .thumbnail {
-                            height: 200px;
+                                                h2 {
+                                                        font-size: 16px;
+                                                }
+                                        }
+                                }
                         }
-
-                        h2 {
-                            font-size: 16px;
-                        }
-                    }
                 }
-            }
         }
-    }
 }
 
 @media (max-width: 768px) {
-    .slider-container {
-        .swiper {
+        .slider-container {
+                .swiper {
+                        &-button-prev,
+                        &-button-next {
+                                padding-top: 10px;
 
-            &-button-prev,
-            &-button-next {
-                padding-top: 10px;
+                                &::after {
+                                        font-size: 25px;
+                                }
+                        }
 
-                &::after {
-                    font-size: 25px;
-                }
-            }
+                        &-button-prev {
+                                &::after {
+                                        padding: 10px 15px 10px 20px;
+                                }
+                        }
 
-            &-button-prev {
-                &::after {
-                    padding: 10px 15px 10px 20px;
-                }
-            }
+                        &-button-next {
+                                &::after {
+                                        padding: 10px 25px 10px 15px;
+                                }
+                        }
 
-            &-button-next {
-                &::after {
-                    padding: 10px 25px 10px 15px;
-                }
-            }
-
-            &:hover {
-                .swiper-button-next {
-                    right: 25px;
-                }
-            }
-        }
-    }
-
-    main {
-        .policies-wrapper {
-            .category-wrapper {
-                position: relative;
-
-                h2 {
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 10px;
-                    font-size: 19px;
-
-                    i {
-                        margin-top: 3px;
-                        display: flex;
-                    }
-                }
-
-                ul {
-                    z-index: 5;
-                    display: none;
-                    left: 0%;
-                    top: 100%;
-                    position: absolute;
-                    background-color: aliceblue;
-                    width: 100%;
-
-                    li {
                         &:hover {
-                            &::before {
-                                left: 0;
-                            }
-                        }
-
-                        a {
-                            padding: 10px 0;
-                            display: block;
-                            width: 100%;
-                            text-align: center;
-
-                            span {
-                                font-size: 17px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .menu-wrapper,
-        .news-wrapper {
-            .wrapper {
-
-                div,
-                .header-wrapper {
-                    a {
-                        h1 {
-                            padding: 30px 20px;
-                            font-size: 22px;
-                        }
-
-                        &::before {
-                            bottom: 17px;
-                            left: 17px;
-                            right: 17px;
-                            top: 17px;
-                        }
-
-                        &::after {
-                            bottom: 17px;
-                            left: 17px;
-                            right: 17px;
-                            top: 17px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .news-wrapper {
-            .wrapper {
-                gap: unset;
-
-                .read-more {
-                    padding: 7px 13px;
-                }
-
-                .press-release {
-                    .news {
-                        .header {
-                            .date-wrapper {
-                                padding: 5px 10px;
-
-                                span {
-                                    font-size: 9px;
+                                .swiper-button-next {
+                                        right: 25px;
                                 }
-                            }
+                        }
+                }
+        }
 
-                            .title {
+        main {
+                .policies-wrapper {
+                        .category-wrapper {
+                                position: relative;
+
                                 h2 {
-                                    font-size: 17px;
+                                        cursor: pointer;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        gap: 10px;
+                                        font-size: 19px;
+
+                                        i {
+                                                margin-top: 3px;
+                                                display: flex;
+                                        }
                                 }
 
-                                .options {
-                                    font-size: 14px;
-                                    display: flex;
-                                    flex-direction: column;
+                                ul {
+                                        z-index: 5;
+                                        display: none;
+                                        left: 0%;
+                                        top: 100%;
+                                        position: absolute;
+                                        background-color: aliceblue;
+                                        width: 100%;
 
-                                    a {
-                                        position: unset;
+                                        li {
+                                                display: flex;
+                                                align-content: center;
+                                                &:hover {
+                                                        &::before {
+                                                                left: 0;
+                                                        }
+                                                }
 
-                                        &::after {
-                                            content: unset;
+                                                a {
+                                                        padding: 10px 0;
+                                                        display: block;
+                                                        width: 100%;
+                                                        padding-left: 20%;
+
+                                                        span {
+                                                                font-size: 17px;
+                                                        }
+                                                }
                                         }
-
-                                        &:last-child {
-                                            padding-left: unset;
-                                        }
-                                    }
                                 }
-                            }
                         }
-
-                        .description {
-                            font-size: 15px;
-                        }
-                    }
                 }
-            }
-        }
 
-    }
+                .menu-wrapper,
+                .news-wrapper {
+                        .wrapper {
+                                div,
+                                .header-wrapper {
+                                        a {
+                                                h1 {
+                                                        padding: 30px 20px;
+                                                        font-size: 22px;
+                                                }
+
+                                                &::before {
+                                                        bottom: 17px;
+                                                        left: 17px;
+                                                        right: 17px;
+                                                        top: 17px;
+                                                }
+
+                                                &::after {
+                                                        bottom: 17px;
+                                                        left: 17px;
+                                                        right: 17px;
+                                                        top: 17px;
+                                                }
+                                        }
+                                }
+                        }
+                }
+
+                .news-wrapper {
+                        .wrapper {
+                                gap: unset;
+
+                                .read-more {
+                                        padding: 7px 13px;
+                                }
+
+                                .press-release {
+                                        .news {
+                                                .header {
+                                                        .date-wrapper {
+                                                                padding: 5px 10px;
+
+                                                                span {
+                                                                        font-size: 9px;
+                                                                }
+                                                        }
+
+                                                        .title {
+                                                                h2 {
+                                                                        font-size: 17px;
+                                                                }
+
+                                                                .options {
+                                                                        font-size: 14px;
+                                                                        display: flex;
+                                                                        flex-direction: column;
+
+                                                                        a {
+                                                                                position: unset;
+
+                                                                                &::after {
+                                                                                        content: unset;
+                                                                                }
+
+                                                                                &:last-child {
+                                                                                        padding-left: unset;
+                                                                                }
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+
+                                                .description {
+                                                        font-size: 15px;
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
 }
 
 @media (max-width: 678px) {
-    main {
-        padding: 24px 10px;
+        main {
+                padding: 24px 10px;
 
-        .policies-wrapper {
-            .category-wrapper {
-                ul {
-                    li {
-                        a {
-                            padding: 8px 0px;
+                .policies-wrapper {
+                        .category-wrapper {
+                                ul {
+                                        li {
+                                                a {
+                                                        padding: 8px 0px;
 
-                            span {
-                                font-size: 16px;
-                            }
+                                                        span {
+                                                                font-size: 16px;
+                                                        }
+                                                }
+                                        }
+                                }
                         }
-                    }
-                }
-            }
-        }
-
-        .news-wrapper {
-            .wrapper {
-                .press-breifing {
-                    .news {
-                        .thumbnail {
-                            height: 180px;
-                        }
-
-                        h2 {
-                            font-size: 15px;
-                        }
-                    }
                 }
 
-                .press-release {
-                    .news {
-                        .header {
-                            .title {
-                                h2 {
-                                    font-size: 15px;
+                .news-wrapper {
+                        .wrapper {
+                                .press-breifing {
+                                        .news {
+                                                .thumbnail {
+                                                        height: 180px;
+                                                }
+
+                                                h2 {
+                                                        font-size: 15px;
+                                                }
+                                        }
                                 }
 
-                                .options {
-                                    font-size: 12px;
-                                }
-                            }
-                        }
+                                .press-release {
+                                        .news {
+                                                .header {
+                                                        .title {
+                                                                h2 {
+                                                                        font-size: 15px;
+                                                                }
 
-                        .description {
-                            font-size: 14px;
+                                                                .options {
+                                                                        font-size: 12px;
+                                                                }
+                                                        }
+                                                }
+
+                                                .description {
+                                                        font-size: 14px;
+                                                }
+                                        }
+                                }
                         }
-                    }
                 }
-            }
         }
-    }
 }
 
 @media (max-width: 578px) {
-    .slider-container {
-        .swiper {
-
-            &-button-prev,
-            &-button-next {
-
-                &::after {
-                    font-size: 20px;
-                }
-            }
-
-            &-button-prev {
-                &::after {
-                    padding: 9px 15px 9px 15px;
-                }
-            }
-
-            &-button-next {
-                &::after {
-                    padding: 9px 20px 9px 17px;
-                }
-            }
-
-            &:hover {
-                .swiper-button-next {
-                    right: 20px;
-                }
-            }
-        }
-    }
-
-    main {
-        padding: 20px 10px;
-
-        .policies-wrapper {
-            .category-wrapper {
-
-                h2 {
-                    font-size: 18px;
-
-                    i {
-                        font-size: 15px;
-                    }
-                }
-
-                ul {
-                    li {
-
-                        a {
-                            text-align: center;
-                            padding: 8px 0;
-                            width: 100%;
-                            display: block;
+        .slider-container {
+                .swiper {
+                        &-button-prev,
+                        &-button-next {
+                                &::after {
+                                        font-size: 20px;
+                                }
                         }
-                    }
+
+                        &-button-prev {
+                                &::after {
+                                        padding: 9px 15px 9px 15px;
+                                }
+                        }
+
+                        &-button-next {
+                                &::after {
+                                        padding: 9px 20px 9px 17px;
+                                }
+                        }
+
+                        &:hover {
+                                .swiper-button-next {
+                                        right: 20px;
+                                }
+                        }
                 }
-            }
         }
 
-        .menu-wrapper,
-        .news-wrapper {
-            .wrapper {
+        main {
+                padding: 20px 10px;
 
-                div,
-                .header-wrapper {
-                    a {
-                        h1 {
-                            padding: 25px 20px;
-                            font-size: 19px;
-                        }
-
-                        &::before {
-                            bottom: 13px;
-                            left: 13px;
-                            right: 13px;
-                            top: 13px;
-                        }
-
-                        &::after {
-                            bottom: 13px;
-                            left: 13px;
-                            right: 13px;
-                            top: 13px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .news-wrapper {
-            .wrapper {
-
-                .read-more {
-                    font-size: 14px;
-                }
-
-                .pagination {
-                    display: flex;
-                    justify-content: center;
-
-                    ul {
-                        border: 1px solid $color-gray;
-                        display: inline-flex;
-
-                        li {
-                            border-right: 1px solid $color-gray;
-                            display: flex;
-                            align-items: center;
-
-                            a {
-                                i {
-                                    margin: unset;
-                                    font-size: 17px;
-                                }
-
-
-                                &:hover {
-                                    background-color: $color-yellow;
-                                    color: $color-white;
-                                }
-                            }
-
-                            span {
-                                display: none;
-                            }
-
-                            &:last-child {
-                                border: unset;
-                            }
-                        }
-                    }
-                }
-
-                .press-breifing {
-
-                    .news {
-                        gap: 10px;
-
-                        .thumbnail {
-                            height: auto;
-
-                            .date {
-                                padding: 5px;
-
-                                &-wrapper {
-                                    strong {
-                                        font-size: 18px;
-                                        padding: 0;
-                                    }
-
-                                    span {
-                                        font-size: 12px;
-                                    }
-                                }
-                            }
-
-                        }
-
-                        h2 {
-                            font-size: 15px;
-                            margin: 0px 0px 10px 0px;
-                        }
-                    }
-                }
-
-                .press-release {
-                    .news {
-                        .header {
-                            .title {
+                .policies-wrapper {
+                        .category-wrapper {
                                 h2 {
-                                    font-size: 16px;
+                                        font-size: 18px;
+
+                                        i {
+                                                font-size: 15px;
+                                        }
                                 }
 
-                                .options {
-                                    font-size: 13px;
+                                ul {
+                                        li {
+                                                a {
+                                                        text-align: center;
+                                                        padding: 8px 0;
+                                                        width: 100%;
+                                                        display: block;
+                                                }
+                                        }
                                 }
-                            }
                         }
-
-                        .description {
-                            font-size: 15px;
-                        }
-                    }
                 }
-            }
+
+                .menu-wrapper,
+                .news-wrapper {
+                        .wrapper {
+                                div,
+                                .header-wrapper {
+                                        a {
+                                                h1 {
+                                                        padding: 25px 20px;
+                                                        font-size: 19px;
+                                                }
+
+                                                &::before {
+                                                        bottom: 13px;
+                                                        left: 13px;
+                                                        right: 13px;
+                                                        top: 13px;
+                                                }
+
+                                                &::after {
+                                                        bottom: 13px;
+                                                        left: 13px;
+                                                        right: 13px;
+                                                        top: 13px;
+                                                }
+                                        }
+                                }
+                        }
+                }
+
+                .news-wrapper {
+                        .wrapper {
+                                .read-more {
+                                        font-size: 14px;
+                                }
+
+                                .pagination {
+                                        display: flex;
+                                        justify-content: center;
+
+                                        ul {
+                                                border: 1px solid $color-gray;
+                                                display: inline-flex;
+
+                                                li {
+                                                        border-right: 1px solid $color-gray;
+                                                        display: flex;
+                                                        align-items: center;
+
+                                                        a {
+                                                                i {
+                                                                        margin: unset;
+                                                                        font-size: 17px;
+                                                                }
+
+                                                                &:hover {
+                                                                        background-color: $color-yellow;
+                                                                        color: $color-white;
+                                                                }
+                                                        }
+
+                                                        span {
+                                                                display: none;
+                                                        }
+
+                                                        &:last-child {
+                                                                border: unset;
+                                                        }
+                                                }
+                                        }
+                                }
+
+                                .press-breifing {
+                                        .news {
+                                                gap: 10px;
+
+                                                .thumbnail {
+                                                        height: auto;
+
+                                                        .date {
+                                                                padding: 5px;
+
+                                                                &-wrapper {
+                                                                        strong {
+                                                                                font-size: 18px;
+                                                                                padding: 0;
+                                                                        }
+
+                                                                        span {
+                                                                                font-size: 12px;
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+
+                                                h2 {
+                                                        font-size: 15px;
+                                                        margin: 0px 0px 10px 0px;
+                                                }
+                                        }
+                                }
+
+                                .press-release {
+                                        .news {
+                                                .header {
+                                                        .title {
+                                                                h2 {
+                                                                        font-size: 16px;
+                                                                }
+
+                                                                .options {
+                                                                        font-size: 13px;
+                                                                }
+                                                        }
+                                                }
+
+                                                .description {
+                                                        font-size: 15px;
+                                                }
+                                        }
+                                }
+                        }
+                }
         }
-
-
-    }
 }
 
 @media (max-width: 480px) {
-    main {
-
-        .policies-wrapper {
-            .category-wrapper {
-
-                h2 {
-                    font-size: 16px;
-                }
-
-                ul {
-                    li {
-                        a {
-                            span {
-                                font-size: 15px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .menu-wrapper,
-        .news-wrapper {
-            .wrapper {
-
-                div,
-                .header-wrapper {
-                    a {
-                        h1 {
-                            padding: 22px 20px;
-                            font-size: 16px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .news-wrapper {
-            .wrapper {
-
-                .read-more {
-                    font-size: 15px;
-                }
-
-                .press-breifing {
-
-                    .news {
-                        .thumbnail {
-                            .date {
-                                padding: 5px 10px;
-
-                                &-wrapper {
-                                    strong {
-                                        font-size: 50px;
-                                        padding: 20px 0 10px 0px;
-                                    }
-
-                                    span {
-                                        font-size: 10px;
-                                    }
-                                }
-                            }
-
-                        }
-
-                        h2 {
-                            font-size: 16px;
-                        }
-                    }
-                }
-
-                .press-release {
-                    .news {
-                        .header {
-                            .title {
+        main {
+                .policies-wrapper {
+                        .category-wrapper {
                                 h2 {
-                                    font-size: 15px;
+                                        font-size: 16px;
                                 }
 
-                                .options {
-                                    font-size: 13px;
+                                ul {
+                                        li {
+                                                a {
+                                                        span {
+                                                                font-size: 15px;
+                                                        }
+                                                }
+                                        }
                                 }
-                            }
                         }
-
-                        .description {
-                            font-size: 14px;
-                        }
-                    }
                 }
-            }
+
+                .menu-wrapper,
+                .news-wrapper {
+                        .wrapper {
+                                div,
+                                .header-wrapper {
+                                        a {
+                                                h1 {
+                                                        padding: 22px 20px;
+                                                        font-size: 16px;
+                                                }
+                                        }
+                                }
+                        }
+                }
+
+                .news-wrapper {
+                        .wrapper {
+                                .read-more {
+                                        font-size: 15px;
+                                }
+
+                                .press-breifing {
+                                        .news {
+                                                .thumbnail {
+                                                        .date {
+                                                                padding: 5px 10px;
+
+                                                                &-wrapper {
+                                                                        strong {
+                                                                                font-size: 50px;
+                                                                                padding: 20px 0 10px 0px;
+                                                                        }
+
+                                                                        span {
+                                                                                font-size: 10px;
+                                                                        }
+                                                                }
+                                                        }
+                                                        img {
+                                                                height: auto;
+                                                                width: 100%;
+                                                        }
+                                                }
+
+                                                h2 {
+                                                        font-size: 16px;
+                                                }
+                                        }
+                                }
+
+                                .press-release {
+                                        .news {
+                                                .header {
+                                                        .title {
+                                                                h2 {
+                                                                        font-size: 15px;
+                                                                }
+
+                                                                .options {
+                                                                        font-size: 13px;
+                                                                }
+                                                        }
+                                                }
+
+                                                .description {
+                                                        font-size: 14px;
+                                                }
+                                        }
+                                }
+                        }
+                }
         }
-    }
 }
 
 @media (max-width: 380px) {
-    main {
-
-        .menu-wrapper,
-        .news-wrapper {
-            .wrapper {
-
-                div,
-                .header-wrapper {
-                    a {
-                        h1 {
-                            padding: 22px 20px;
-                            font-size: 14px;
+        main {
+                .menu-wrapper,
+                .news-wrapper {
+                        .wrapper {
+                                div,
+                                .header-wrapper {
+                                        a {
+                                                h1 {
+                                                        padding: 22px 20px;
+                                                        font-size: 14px;
+                                                }
+                                        }
+                                }
                         }
-                    }
                 }
-            }
         }
-    }
 }

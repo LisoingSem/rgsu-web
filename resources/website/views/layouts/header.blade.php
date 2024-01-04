@@ -3,14 +3,14 @@
             <div class="wrapper container-lg max-w-screen-xl mx-auto">
                   <div class="left-side">
                         <ul>
-                              <li><a href="#">About</a></li>
+                              <li><a href="#">@lang('website.menu.about.text')</a></li>
                               <li><a href="#">FQA</a></li>
-                              <li><a href="#">Contact</a></li>
+                              <li><a href="#">@lang('website.menu.contact.text')</a></li>
                         </ul>
                   </div>
                   <div class="right-side">
                         <ul>
-                              <li><a href="#">Achieve</a></li>
+                              <li><a href="#">@lang('website.menu.achieve.text')</a></li>
                               <li class="language">
                                     @include('website::components.switch-lang')
                               </li>

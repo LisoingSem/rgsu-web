@@ -3,12 +3,12 @@
             <section class="top-wrapper">
                   <img src="{{asset('assets/images/main/logo.png')}}" alt="">
                   <ul>
-                        <li><a href="#">The RGC's six policies</a></li>
-                        <li><a href="#">Prime Minister</a></li>
-                        <li><a href="#">Pentagonal Strategy</a></li>
-                        <li><a href="#">Monthly Updated</a></li>
-                        <li><a href="#">Spokespersons</a></li>
-                        <li><a href="#">Help</a></li>
+                        <li><a href="#">@lang('website.footer.policy')</a></li>
+                        <li><a href="#">@lang('website.footer.pm')</a></li>
+                        <li><a href="#">@lang('website.footer.pentagonal')</a></li>
+                        <li><a href="#">@lang('website.footer.monthly')</a></li>
+                        <li><a href="#">@lang('website.footer.spokesperson')</a></li>
+                        <li><a href="#">@lang('website.footer.help')</a></li>
                   </ul>
             </section>
 
@@ -45,10 +45,10 @@
             <section class="footer-wrapper">
                   <div class="news-letter">
                         <h2>@lang('website.footer.news-letter')</h2>
-                        <div class="input-wrapper">
-                              <input type="text" value="Enter your Email..." onfocus="if (this.value==this.defaultValue) this.value = ''" onblur="if (this.value=='') this.value = this.defaultValue">
-                              <div class="icon"><i class="fa-regular fa-envelope"></i></div>
-                        </div>
+                        <form class="input-wrapper">
+                              <input type="email" value="@lang('website.email')" onfocus="if (this.value==this.defaultValue) this.value = ''" onblur="if (this.value=='') this.value = this.defaultValue">
+                              <button class="icon"><i class="fa-regular fa-envelope"></i></button>
+                        </form>
                   </div>
 
                   <div class="follow">
