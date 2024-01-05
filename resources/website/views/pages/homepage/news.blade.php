@@ -2,10 +2,14 @@
     <div class="press-breifing">
         <div class="header-wrapper">
             <a href="#">
-                <h1>Press Breifing Schedule</h1>
+                <h1 @class(['font-km' => !!$isLocaleKm,])>{{ __('website.menu.press-breifing-highlight.text') }}</h1>
             </a>
         </div>
 
+        <?php
+        use Carbon\Carbon;
+        $currentDate = Carbon::now();
+        ?>
         <div class="grid grid-cols-1 sm:grid-cols-2 xs:gap-0 sm:gap-3 lg:gap-0 lg:grid-cols-1">
             <div class="grid grid-cols-1 xs:grid-cols-5 sm:grid-cols-1 lg:grid-cols-7 news">
                 <div class="xs:col-span-2 lg:col-span-3">
@@ -13,8 +17,8 @@
                         <img src="{{ asset('assets/images/news/01.jpeg') }}" alt="">
                         <div class="date">
                             <div class="date-wrapper">
-                                <strong>21</strong>
-                                <span>Dec, 2023</span>
+                                <strong>{{ __('website.day.' . $currentDate->format('d')) }}</strong>
+                                <span>{{ __('website.months.' . $currentDate->format('m')) }}, {{ __('website.years.' . $currentDate->format('Y')) }}</span>
                             </div>
                         </div>
                     </div>
@@ -162,10 +166,10 @@
         <div class="pagination">
             <ul>
                 <li><a href="#"><i class="fa-solid fa-angles-left"></i> <span>@lang('website.paginations.privious')</span></a></li>
-                <li class="active"><a href="#">@lang('website.number.1')</a></li>
-                <li><a href="#">@lang('website.number.2')</a></li>
-                <li><a href="#">@lang('website.number.3')</a></li>
-                <li><a href="#">@lang('website.number.4')</a></li>
+                <li class="active"><a href="#">{{ __('website.number.1') }}</a></li>
+                <li><a href="#">{{ __('website.number.2') }}</a></li>
+                <li><a href="#">{{ __('website.number.3') }}</a></li>
+                <li><a href="#">{{ __('website.number.4') }}</a></li>
                 <li><a href="#"><span>@lang('website.paginations.next')</span> <i class="fa-solid fa-angles-right"></i></a></li>
             </ul>
         </div>
@@ -174,7 +178,7 @@
     <div class="press-release">
         <div class="header-wrapper">
             <a href="#">
-                <h1>Press Release / Oq-Ed / Statement</h1>
+                <h1 @class(['font-km' => !!$isLocaleKm,])>{{ __('website.menu.press-release-highlight.text') }}</h1>
             </a>
         </div>
 

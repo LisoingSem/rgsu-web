@@ -10,4 +10,16 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public $isLocaleKm;
+    public function __construct()
+    {
+        $this->middleware(function ($request, $next) {
+            $this->isLocaleKm = app()->getLocale() == config('dummy.locale.km');
+            view()->share([
+                'isLocaleKm'       => $this->isLocaleKm,
+            ]);
+            return $next($request);
+        });
+    }
 }

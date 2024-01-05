@@ -378,6 +378,10 @@ main {
                                                 color: $color-white;
                                                 text-transform: uppercase;
                                                 white-space: nowrap;
+
+                                                &.font-km {
+                                                        font-size: 27px;
+                                                }
                                         }
 
                                         &::before {
@@ -514,7 +518,7 @@ main {
 
                                                 .date-wrapper {
                                                         padding: 10px 10px;
-                                                        background-color: $color-yellow;
+                                                        background-color: $color-secondary;
                                                         opacity: 0.9;
                                                         line-height: 23px;
                                                         display: flex;
@@ -599,6 +603,7 @@ main {
                                         }
 
                                         .description {
+                                                cursor: default;
                                                 margin: 10px 0;
                                                 font-size: 18px;
                                                 transition: all 0.3s ease-in-out;
@@ -631,6 +636,10 @@ main {
                                                 h1 {
                                                         padding: 45px 20px;
                                                         font-size: 27px;
+
+                                                        &.font-km {
+                                                                font-size: 25px;
+                                                        }
                                                 }
                                         }
                                 }
@@ -716,6 +725,9 @@ main {
                                                 h1 {
                                                         padding: 40px 20px;
                                                         font-size: 24px;
+                                                        &.font-km {
+                                                                font-size: 23px;
+                                                        }
                                                 }
                                         }
                                 }
@@ -764,6 +776,9 @@ main {
                                         a {
                                                 h1 {
                                                         font-size: 22px;
+                                                        &.font-km {
+                                                                font-size: 21px;
+                                                        }
                                                 }
                                         }
                                 }
@@ -804,9 +819,23 @@ main {
         main {
                 padding: 28px 10px;
 
-                .news-wrapper {
+                .news-wrapper,
+                .menu-wrapper {
                         .wrapper {
-                                gap: unset;
+                                gap: 10px;
+
+                                div,
+                                .header-wrapper {
+                                        a {
+                                                h1 {
+                                                        padding: 30px 20px;
+                                                        font-size: 22px;
+                                                        &.font-km {
+                                                                font-size: 25px;
+                                                        }
+                                                }
+                                        }
+                                }
 
                                 .read-more {
                                         padding: 7px 13px;
@@ -1092,6 +1121,22 @@ main {
         main {
                 padding: 24px 10px;
 
+                .menu-wrapper,
+                .news-wrapper {
+                        .wrapper {
+                                div,
+                                .header-wrapper {
+                                        a {
+                                                h1 {
+                                                        &.font-km {
+                                                                font-size: 24px;
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+
                 .policies-wrapper {
                         .category-wrapper {
                                 ul {
@@ -1210,7 +1255,11 @@ main {
                                         a {
                                                 h1 {
                                                         padding: 25px 20px;
-                                                        font-size: 19px;
+                                                        font-size: 20px;
+
+                                                        &.font-km {
+                                                                font-size: 19px;
+                                                        }
                                                 }
 
                                                 &::before {
@@ -1355,7 +1404,11 @@ main {
                                         a {
                                                 h1 {
                                                         padding: 22px 20px;
-                                                        font-size: 16px;
+                                                        font-size: 18px;
+
+                                                        &.font-km {
+                                                                font-size: 17px;
+                                                        }
                                                 }
                                         }
                                 }
@@ -1432,6 +1485,10 @@ main {
                                                 h1 {
                                                         padding: 22px 20px;
                                                         font-size: 14px;
+
+                                                        &.font-km {
+                                                                font-size: 15px;
+                                                        }
                                                 }
                                         }
                                 }

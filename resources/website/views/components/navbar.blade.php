@@ -3,7 +3,8 @@
             <div class="close block lg:hidden"><i class="fa-regular fa-rectangle-xmark"></i></div>
             <div class="bg"></div>
             <ul class="menu-bar">
-                  <li><a href="#">@lang('website.menu.home.text')</a></li>
+                  <li @class(['active' => !!Request::is('/'),
+                    'font-km' => !!$isLocaleKm,])><a href="{{ route('home') }}">@lang('website.menu.home.text')</a></li>
                   <li><a href="#">@lang('website.menu.spokesperson.text')</a></li>
                   <li><a href="#">@lang('website.menu.press-breifing.text')</a></li>
                   <li><a href="#">@lang('website.menu.public-schedule.text')</a></li>
