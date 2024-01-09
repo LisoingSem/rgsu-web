@@ -1,20 +1,20 @@
 <div class="grid md:grid-cols-7 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-5">
     <div class="category-wrapper md:col-span-2 lg:col-span-1">
-        <h2 class="policy-text"><span>THE RGC’S SIX POLICIES</span> <i class="fa-solid fa-angle-down"></i></h2>
+        <h2 @class(['font-km' => !!$isLocaleKm, 'policy-text'])><span>@lang('website.policies.text')</span> <i class="fa-solid fa-angle-down"></i></h2>
 
         <ul class="policy-category">
             <li><a href="#" data-image-src="assets/images/policies/01.jpg">
-                    <i class="fa-solid fa-circle-dot"></i> <span>The RGC’s 1st policies</span></a></li>
+                    <i class="fa-solid fa-circle-dot"></i> <span>@lang('website.policies.list.1')</span></a></li>
             <li><a href="#" data-image-src="assets/images/slide/mission.jpg"><i class="fa-solid fa-circle-dot"></i>
-                    <span>The RGC’s 2nd policies</span></a></li>
+                    <span>@lang('website.policies.list.2')</span></a></li>
             <li><a href="#" data-image-src="assets/images/slide/festival.jpg"><i
-                        class="fa-solid fa-circle-dot"></i> <span>The RGC’s 3rd policies</span></a></li>
+                        class="fa-solid fa-circle-dot"></i> <span>@lang('website.policies.list.3')</span></a></li>
             <li><a href="#" data-image-src="assets/images/slide/mission.jpg"><i
-                        class="fa-solid fa-circle-dot"></i> <span>The RGC’s 4thpolicies</span></a></li>
+                        class="fa-solid fa-circle-dot"></i> <span>@lang('website.policies.list.4')</span></a></li>
             <li><a href="#" data-image-src="assets/images/policies/01.jpg"><i class="fa-solid fa-circle-dot"></i>
-                    <span>The RGC’s 5th policies</span></a></li>
+                    <span>@lang('website.policies.list.5')</span></a></li>
             <li><a href="#" data-image-src="assets/images/slide/festival.jpg"><i
-                        class="fa-solid fa-circle-dot"></i> <span>The RGC’s 6th policies</span></a></li>
+                        class="fa-solid fa-circle-dot"></i> <span>@lang('website.policies.list.6')</span></a></li>
         </ul>
     </div>
 

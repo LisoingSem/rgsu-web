@@ -1,7 +1,7 @@
 <footer>
       <div class="wrapper container-lg max-w-screen-xl mx-auto">
             <section class="top-wrapper">
-                  <img src="{{asset('assets/images/main/logo.png')}}" alt="">
+                  <a href="{{ route('home') }}"><img src="{{asset('assets/images/main/logo.png')}}" alt=""></a>
                   <ul>
                         <li><a href="#">@lang('website.footer.policy')</a></li>
                         <li><a href="#">@lang('website.footer.pm')</a></li>

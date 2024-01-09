@@ -70,6 +70,7 @@ header {
 
                                 &.lang-item {
                                     display: none;
+                                    cursor: pointer;
                                 }
 
                                 &.selected {
@@ -123,16 +124,20 @@ header {
             display: flex;
             align-items: center;
 
-            img {
+            .logo {
                 height: 100px;
-                width: auto;
+                width: 100%;
+                img {
+                    height: 100%;
+                    width: auto;
+                }
             }
 
             .search-wrapper {
                 width: 100%;
 
                 .search {
-                    margin: auto;
+                    // margin: 0px 50px;
                     display: flex;
                     align-items: center;
                     color: $color-white;
@@ -219,6 +224,7 @@ header {
             .wrapper {
                 .search-wrapper {
                     .search {
+                        margin: unset;
                         width: 100%;
 
                         .filter {
@@ -255,9 +261,13 @@ header {
                 grid-template-columns: repeat(1, minmax(0, 1fr));
                 align-items: center;
 
-                img {
-                    height: auto;
+                .logo {
+                    height: 100%;
                     width: 100%;
+                    img {
+                        height: auto;
+                        width: 100%;
+                    }
                 }
 
                 .search {

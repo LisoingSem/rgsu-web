@@ -12,8 +12,8 @@ footer {
             align-items: center;
 
             img {
-                height: 60px;
-                padding-right: 50px;
+                height: 70px;
+                padding-right: 30px;
                 width: auto;
             }
 
@@ -28,7 +28,7 @@ footer {
                     a {
                         padding: 0px 15px;
                         font-size: 16px;
-                        transition: all .5s ease-in-out;
+                        transition: all 0.5s ease-in-out;
 
                         &:hover {
                             color: $color-yellow;
@@ -36,7 +36,7 @@ footer {
                     }
 
                     &::before {
-                        content: '';
+                        content: "";
                         bottom: 23%;
                         height: 55%;
                         width: 1px;
@@ -46,7 +46,7 @@ footer {
 
                     &:last-child {
                         &::after {
-                            content: '';
+                            content: "";
                             bottom: 23%;
                             height: 55%;
                             width: 1px;
@@ -63,16 +63,20 @@ footer {
             border-bottom: 1px solid #e8e8e8;
 
             h2 {
+                font-size: 18px;
                 font-weight: bolder;
                 padding-bottom: 10px;
                 text-transform: uppercase;
+                @supports (-webkit-touch-callout: none) {
+                    letter-spacing: -1px;
+                }
             }
 
             ul {
                 list-style-type: disc;
 
                 li {
-                    transition: all .3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
                     margin: 0 20px;
                     padding-bottom: 3px;
 
@@ -83,7 +87,6 @@ footer {
                     &:hover {
                         color: $color-yellow;
                     }
-
                 }
             }
 
@@ -91,6 +94,9 @@ footer {
                 list-style-type: none;
 
                 li {
+                    @supports (-webkit-appearance: none) {
+                        gap: 10px;
+                    }
                     gap: 10px;
                     display: flex;
                     align-items: center;
@@ -98,7 +104,6 @@ footer {
                     cursor: pointer;
 
                     i {
-
                         color: $color-yellow;
                     }
                 }
@@ -115,13 +120,15 @@ footer {
                 font-size: 18px;
                 white-space: nowrap;
                 text-transform: uppercase;
+                @supports (-webkit-touch-callout: none) {
+                    letter-spacing: -1px;
+                }
             }
 
             .news-letter {
                 display: flex;
                 gap: 30px;
                 align-items: center;
-
 
                 .input-wrapper {
                     display: flex;
@@ -195,7 +202,6 @@ footer {
                     justify-content: center;
                 }
             }
-
         }
     }
 }
@@ -274,7 +280,6 @@ footer {
             }
 
             .footer-wrapper {
-
                 h2 {
                     font-size: 16px;
                 }
@@ -299,7 +304,6 @@ footer {
     footer {
         .wrapper {
             .footer-wrapper {
-
                 h2 {
                     font-size: 15px;
                 }

@@ -16,5 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/switch-lang/{lang}', [App\Http\Controllers\LanguageController::class, 'Index'])->name('website-switch-lang');
 Route::middleware(['locale'])->group(function () {
-      Route::get('/', [App\Http\Controllers\website\HomeController::class, 'index'])->name('home');
+	Route::get('/', [App\Http\Controllers\website\HomeController::class, 'index'])->name('home');
 });

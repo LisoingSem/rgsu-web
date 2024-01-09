@@ -2,23 +2,24 @@
     <div class="press-breifing">
         <div class="header-wrapper">
             <a href="#">
-                <h1 @class(['font-km' => !!$isLocaleKm,])>{{ __('website.menu.press-breifing-highlight.text') }}</h1>
+                <h1 @class(['font-km' => !!$isLocaleKm])>{{ __('website.menu.press-breifing-highlight.text') }}</h1>
             </a>
         </div>
 
         <?php
         use Carbon\Carbon;
         $currentDate = Carbon::now();
+
         ?>
         <div class="grid grid-cols-1 sm:grid-cols-2 xs:gap-0 sm:gap-3 lg:gap-0 lg:grid-cols-1">
             <div class="grid grid-cols-1 xs:grid-cols-5 sm:grid-cols-1 lg:grid-cols-7 news">
                 <div class="xs:col-span-2 lg:col-span-3">
                     <div class="thumbnail">
-                        <img src="{{ asset('assets/images/news/01.jpeg') }}" alt="">
+                        <a href="#"><img src="{{ asset('assets/images/news/01.jpeg') }}" alt=""></a>
                         <div class="date">
                             <div class="date-wrapper">
-                                <strong>{{ __('website.day.' . $currentDate->format('d')) }}</strong>
-                                <span>{{ __('website.months.' . $currentDate->format('m')) }}, {{ __('website.years.' . $currentDate->format('Y')) }}</span>
+                                <strong>{{ translateDayNumber($currentDate) }}</strong>
+                                <span>{{ translateMonthYear($currentDate) }}</span>
                             </div>
                         </div>
                     </div>
@@ -40,11 +41,11 @@
             <div class="grid grid-cols-1 xs:grid-cols-5 sm:grid-cols-1  lg:grid-cols-7 news">
                 <div class="xs:col-span-2 lg:col-span-3">
                     <div class="thumbnail">
-                        <img src="{{ asset('assets/images/news/02.jpeg') }}" alt="">
+                        <a href="#"><img src="{{ asset('assets/images/news/02.jpeg') }}" alt=""></a>
                         <div class="date">
                             <div class="date-wrapper">
-                                <strong>21</strong>
-                                <span>Dec, 2023</span>
+                                <strong>{{ translateDayNumber($currentDate) }}</strong>
+                                <span>{{ translateMonthYear($currentDate) }}</span>
                             </div>
                         </div>
                     </div>
@@ -65,11 +66,11 @@
             <div class="grid grid-cols-1 xs:grid-cols-5 sm:grid-cols-1  lg:grid-cols-7 news">
                 <div class="xs:col-span-2 lg:col-span-3">
                     <div class="thumbnail">
-                        <img src="{{ asset('assets/images/news/03.jpeg') }}" alt="">
+                        <a href="#"><img src="{{ asset('assets/images/news/03.jpeg') }}" alt=""></a>
                         <div class="date">
                             <div class="date-wrapper">
-                                <strong>21</strong>
-                                <span>Dec, 2023</span>
+                                <strong>{{ translateDayNumber($currentDate) }}</strong>
+                                <span>{{ translateMonthYear($currentDate) }}</span>
                             </div>
                         </div>
                     </div>
@@ -90,11 +91,11 @@
             <div class="grid grid-cols-1 xs:grid-cols-5 sm:grid-cols-1  lg:grid-cols-7 news">
                 <div class="xs:col-span-2 lg:col-span-3">
                     <div class="thumbnail">
-                        <img src="{{ asset('assets/images/news/04.jpeg') }}" alt="">
+                        <a href="#"><img src="{{ asset('assets/images/news/04.jpeg') }}" alt=""></a>
                         <div class="date">
                             <div class="date-wrapper">
-                                <strong>21</strong>
-                                <span>Dec, 2023</span>
+                                <strong>{{ translateDayNumber($currentDate) }}</strong>
+                                <span>{{ translateMonthYear($currentDate) }}</span>
                             </div>
                         </div>
                     </div>
@@ -115,11 +116,11 @@
             <div class="grid grid-cols-1 xs:grid-cols-5 sm:grid-cols-1  lg:grid-cols-7 news">
                 <div class="xs:col-span-2 lg:col-span-3">
                     <div class="thumbnail">
-                        <img src="{{ asset('assets/images/news/04.jpeg') }}" alt="">
+                        <a href="#"><img src="{{ asset('assets/images/news/04.jpeg') }}" alt=""></a>
                         <div class="date">
                             <div class="date-wrapper">
-                                <strong>21</strong>
-                                <span>Dec, 2023</span>
+                                <strong>{{ translateDayNumber($currentDate) }}</strong>
+                                <span>{{ translateMonthYear($currentDate) }}</span>
                             </div>
                         </div>
                     </div>
@@ -140,11 +141,11 @@
             <div class="grid grid-cols-1 xs:grid-cols-5 sm:grid-cols-1  lg:grid-cols-7 news">
                 <div class="xs:col-span-2 lg:col-span-3">
                     <div class="thumbnail">
-                        <img src="{{ asset('assets/images/news/06.jpeg') }}" alt="">
+                        <a href="#"><img src="{{ asset('assets/images/news/06.jpeg') }}" alt=""></a>
                         <div class="date">
                             <div class="date-wrapper">
-                                <strong>21</strong>
-                                <span>Dec, 2023</span>
+                                <strong>{{ translateDayNumber($currentDate) }}</strong>
+                                <span>{{ translateMonthYear($currentDate) }}</span>
                             </div>
                         </div>
                     </div>
@@ -161,16 +162,18 @@
                     </a>
                 </div>
             </div>
+
         </div>
 
         <div class="pagination">
             <ul>
                 <li><a href="#"><i class="fa-solid fa-angles-left"></i> <span>@lang('website.paginations.privious')</span></a></li>
-                <li class="active"><a href="#">{{ __('website.number.1') }}</a></li>
-                <li><a href="#">{{ __('website.number.2') }}</a></li>
-                <li><a href="#">{{ __('website.number.3') }}</a></li>
-                <li><a href="#">{{ __('website.number.4') }}</a></li>
-                <li><a href="#"><span>@lang('website.paginations.next')</span> <i class="fa-solid fa-angles-right"></i></a></li>
+                <li class="active"><a href="#">{{ translateNumber(1) }}</a></li>
+                <li><a href="#">{{ translateNumber(2) }}</a></li>
+                <li><a href="#">{{ translateNumber(3) }}</a></li>
+                <li><a href="#">{{ translateNumber(4) }}</a></li>
+                <li><a href="#"><span>@lang('website.paginations.next')</span> <i class="fa-solid fa-angles-right"></i></a>
+                </li>
             </ul>
         </div>
     </div>
@@ -178,7 +181,7 @@
     <div class="press-release">
         <div class="header-wrapper">
             <a href="#">
-                <h1 @class(['font-km' => !!$isLocaleKm,])>{{ __('website.menu.press-release-highlight.text') }}</h1>
+                <h1 @class(['font-km' => !!$isLocaleKm])>{{ __('website.menu.press-release-highlight.text') }}</h1>
             </a>
         </div>
 
@@ -187,8 +190,8 @@
             <div class="news">
                 <div class="header">
                     <div class="date-wrapper">
-                        <strong>21</strong>
-                        <span>Dec, 2023</span>
+                        <strong>{{ translateDayNumber($currentDate) }}</strong>
+                        <span>{{ translateMonthYear($currentDate) }}</span>
                     </div>
                     <div class="title">
                         <a href="#">
@@ -216,8 +219,8 @@
             <div class="news">
                 <div class="header">
                     <div class="date-wrapper">
-                        <strong>21</strong>
-                        <span>Dec, 2023</span>
+                        <strong>{{ translateDayNumber($currentDate) }}</strong>
+                        <span>{{ translateMonthYear($currentDate) }}</span>
                     </div>
                     <div class="title">
                         <a href="#">
@@ -247,8 +250,8 @@
             <div class="news">
                 <div class="header">
                     <div class="date-wrapper">
-                        <strong>21</strong>
-                        <span>Dec, 2023</span>
+                        <strong>{{ translateDayNumber($currentDate) }}</strong>
+                        <span>{{ translateMonthYear($currentDate) }}</span>
                     </div>
                     <div class="title">
                         <a href="#">
@@ -278,8 +281,8 @@
             <div class="news">
                 <div class="header">
                     <div class="date-wrapper">
-                        <strong>21</strong>
-                        <span>Dec, 2023</span>
+                        <strong>{{ translateDayNumber($currentDate) }}</strong>
+                        <span>{{ translateMonthYear($currentDate) }}</span>
                     </div>
                     <div class="title">
                         <a href="#">
@@ -309,8 +312,8 @@
             <div class="news">
                 <div class="header">
                     <div class="date-wrapper">
-                        <strong>21</strong>
-                        <span>Dec, 2023</span>
+                        <strong>{{ translateDayNumber($currentDate) }}</strong>
+                        <span>{{ translateMonthYear($currentDate) }}</span>
                     </div>
                     <div class="title">
                         <a href="#">
@@ -340,8 +343,8 @@
             <div class="news">
                 <div class="header">
                     <div class="date-wrapper">
-                        <strong>21</strong>
-                        <span>Dec, 2023</span>
+                        <strong>{{ translateDayNumber($currentDate) }}</strong>
+                        <span>{{ translateMonthYear($currentDate) }}</span>
                     </div>
                     <div class="title">
                         <a href="#">
@@ -373,11 +376,12 @@
         <div class="pagination">
             <ul>
                 <li><a href="#"><i class="fa-solid fa-angles-left"></i> <span>@lang('website.paginations.privious')</span></a></li>
-                <li class="active"><a href="#">@lang('website.number.1')</a></li>
-                <li><a href="#">@lang('website.number.2')</a></li>
-                <li><a href="#">@lang('website.number.3')</a></li>
-                <li><a href="#">@lang('website.number.4')</a></li>
-                <li><a href="#"><span>@lang('website.paginations.next')</span> <i class="fa-solid fa-angles-right"></i></a></li>
+                <li class="active"><a href="#">{{ translateNumber(1) }}</a></li>
+                <li><a href="#">{{ translateNumber(2) }}</a></li>
+                <li><a href="#">{{ translateNumber(3) }}</a></li>
+                <li><a href="#">{{ translateNumber(4) }}</a></li>
+                <li><a href="#"><span>@lang('website.paginations.next')</span> <i class="fa-solid fa-angles-right"></i></a>
+                </li>
             </ul>
         </div>
     </div>

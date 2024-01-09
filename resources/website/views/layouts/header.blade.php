@@ -21,7 +21,8 @@
 
       <section class="header-wrapper">
             <div class="wrapper container-lg max-w-screen-xl mx-auto">
-                  <img src="{{ asset('assets/images/main/logo.png') }}" alt="">
+                  <a class="logo" href=""><img src="{{ asset('assets/images/main/logo.png') }}" alt=""></a>
+
 
                   <div class="search-wrapper hidden lg:flex">
                         @include('website::components.search')
